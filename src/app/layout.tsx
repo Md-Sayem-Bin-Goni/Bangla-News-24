@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Navlinks from "@/components/Navlinks";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   variable: "--font-geist-sans",
@@ -19,10 +20,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      data-theme= 'light'
       className={`${notoSerifBengali.className}  h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
+        <Navlinks/>
         {children}</body>
     </html>
   );

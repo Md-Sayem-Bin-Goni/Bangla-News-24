@@ -7,24 +7,29 @@ const Header = () => {
         dateStyle: 'full'
     })
 
-    console.log(date);
+
 
     return (
-        <div className='flex justify-center'>
-            <div> <div className='flex gap-4'>
-                <Image src={logo}
-                    height={40}
-                    width={100}
-                    alt='header logo' />
-                <div>
-                    <h2 className='font-bold text-3xl'>Bangla News 24</h2>
+        <div className='grid grid-cols-2 items-center container mx-auto py-2'>
+            <div className='flex items-center justify-center '>
+                <div className='flex gap-4'>
+                    <Image src={logo}
+                        height={40}
+                        width={100}
+                        alt='header logo' />
                     <div>
-                        <p>{date}</p>
+                        <h2 className='font-bold text-3xl'>Bangla News 24</h2>
+                        <div>
+                            <p>{date}</p>
+                        </div>
                     </div>
+
                 </div>
 
             </div>
-
+            <div className='flex justify-end gap-4 '>
+                <button className="btn btn-primaryn ">সাইন ইন</button>
+                <button className="btn btn-primaryn bg-red-700  text-white">সাইন আপ</button>
             </div>
         </div>
     );
