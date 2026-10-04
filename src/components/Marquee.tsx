@@ -32,7 +32,7 @@ const Marquee = async () => {
                     <div className=' text-white py-1'>
 
                         {
-                            links.map((link, idx: number) =>
+                            links.map((link) =>
                                 <Link key={link.id}
                                     className="hover:underline"
                                     href={`/news/${link.id}`}>

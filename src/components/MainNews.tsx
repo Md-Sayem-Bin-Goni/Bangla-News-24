@@ -1,11 +1,10 @@
 import React from 'react';
-import NewsCard from './NewsCard';
 import Image from 'next/image';
 import MostRead from './MostRead';
 import Link from 'next/link';
 
 interface INews {
-    id: number;
+    id: string;
     title: string;
     description: string;
     category: string;

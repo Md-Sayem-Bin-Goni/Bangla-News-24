@@ -3,7 +3,7 @@ import React from 'react';
 
 interface INews {
     title: string
-    id: number
+    id: string
 }
 
 const MostRead = async () => {

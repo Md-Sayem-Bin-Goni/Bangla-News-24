@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 
 interface IfilterNavLinks {
-id : number,
+id : string,
 title: string,
 slug : string,
 scrapable : boolean

@@ -1,8 +1,7 @@
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
-import React from 'react';
 
-const page = async ({ params }) => {
+
+const page = async ({ params,}: { params: Promise<{ newsId: string }>;}) => {
 
     const { newsId } = await params
     console.log(newsId);
