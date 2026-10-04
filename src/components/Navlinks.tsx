@@ -25,7 +25,7 @@ const Navlinks = async () => {
             className='hover:text-red-700 hover:underline'
             href='/'>হোম</Link>
             {
-                filterNavLinks.map((filterNavLink, idx) => <Link key={idx}  href={filterNavLink.slug} className='hover:text-red-700 hover:underline'>{filterNavLink.title}</Link>)
+                filterNavLinks.map((filterNavLink, idx) => <Link key={idx}  href={`/category/${filterNavLink.slug}`} className='hover:text-red-700 hover:underline'>{filterNavLink.title}</Link>)
             }
         </div>
     );

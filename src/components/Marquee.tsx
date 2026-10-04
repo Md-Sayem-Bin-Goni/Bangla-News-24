@@ -5,6 +5,7 @@ import "react-marquee-text/dist/styles.css"
 
 interface ILinks {
     title: string,
+    id: string
 }
 
 const Marquee = async () => {
@@ -32,14 +33,14 @@ const Marquee = async () => {
 
                         {
                             links.map((link, idx: number) =>
-                                <Link
+                                <Link key={link.id}
+                                    className="hover:underline"
+                                    href={`/news/${link.id}`}>
+                                    <span >{link.title}</span>
+                                    <span className='mx-5 '>󠁯•󠁏</span>
+                                </Link>
 
-                                    href='/' key={idx}>
-                                    <span >
-                                        <span >{link.title}</span>
-                                        <span className='mx-5 '>󠁯•󠁏</span>
-                                    </span>
-                                </Link>)
+                            )
                         }
 
                     </div>
